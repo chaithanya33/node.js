@@ -1,0 +1,22 @@
+# Frontend
+frontend/node_modules
+frontend/build
+frontend/.env
+frontend/.git
+
+# Backend
+backend/vendor
+backend/node_modules
+backend/.env
+backend/.git
+backend/storage/logs/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+
+# General
+.git
+.gitignore
+README.md
+.DS_Store
+*.log
