@@ -41,8 +41,9 @@ COPY docker/nginx.conf /etc/nginx/sites-available/default
 # Copy supervisor configuration
 COPY docker/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Expose port
-EXPOSE 8000
+# Expose the port that nginx listens to inside container
+EXPOSE 80
 
-# Start supervisor
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+# Start supervisor (starts PHP-FPM + nginx)
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]:wq!
+
